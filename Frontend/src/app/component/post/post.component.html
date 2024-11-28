@@ -1,0 +1,106 @@
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header bg-info">
+                New Task
+            </div>
+            <div class="card-body">
+                <!-- <form action=""> -->
+                <div class="row">
+                    <!-- <div class="col-6">
+                        <label for="Name">user ID</label>
+                        <input type="text" [(ngModel)]="postRequest.userId" class="form-control">
+                    </div>
+                    <div class="col-6">
+                        <label for="">post ID</label>
+                        <input type="text"[(ngModel)]="postRequest.id" class="form-control">
+                    </div> -->
+                    <!-- <div class="col-8">
+                        <label for="">title </label>
+                        <input type="text"[(ngModel)]="postRequest.title" class="form-control title">
+                    </div> -->
+                    <div class="col-6">
+                        <!-- <label for="">body </label> -->
+                        <textarea name="" id=""[(ngModel)]="postRequest.title" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-6 text-center">
+                        <button class="btn btn-success" (click)="savePost()">Save</button>
+                    </div>
+                    <!-- <div class="col-6">
+                        <button class="btn btn-secondary text-center">Reset</button>
+                    </div> -->
+                </div>
+            <!-- </form> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<button class="btn btn-success m-2" (click)="showPosts()">Show Tasks</button>
+
+<button class="btn btn-success m-2" (click)="hidePosts()">Hide Tasks</button>
+
+<br>
+<br>
+
+@if (show) {
+<ul>
+    <li *ngFor="let post of posts">
+    
+      <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header bg-info">
+                     Task
+                </div>
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <!-- <div class="col-6">
+                            <label for="Name">user ID</label>
+                            <input type="text" [(ngModel)]="post.userId" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label for="">post ID</label>
+                            <input type="text"[(ngModel)]="post.id" class="form-control">
+                        </div> -->
+                        <!-- <div class="col-8">
+                            <label for="">title </label>
+                            <input type="text"[(ngModel)]="post.title" class="form-control title">
+                        </div> -->
+                        <div class="col-6">
+                            <!-- <label for="">body </label> -->
+                            <textarea name="" id=""[(ngModel)]="post.title" class="form-control"></textarea>
+                        </div>
+                        <div class="col-1">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" [(ngModel)]="post.done" 
+                                 [ngClass]="{'checked': post.done}" (change)="updatePost(post.id, post)">
+                                <span class="checkmark"></span> 
+                              </label>
+                        </div>
+                     
+                  
+                    <!-- <div class="row pt-2"> -->
+                        <div class="col-2 text-center">
+                            <button class="btn btn-success" (click)="updatePost(post.id, post)" >Update</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-danger text-center" (click)="deletePost(post.id)">Delete</button>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </li>
+
+  </ul>
+
+}

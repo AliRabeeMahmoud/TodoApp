@@ -1,0 +1,53 @@
+/* .title{
+    font-weight: 800;
+} */
+ li{
+    list-style-type: none;
+ }
+
+ /* Style the checkbox */
+.custom-checkbox input {
+    display: none; /* Hide the default checkbox */
+  }
+  
+  /* Create a custom checkbox */
+  .custom-checkbox {
+    position: relative;
+    padding-left: 40px; /* Space for the checkbox */
+    font-size: 20px;
+    cursor: pointer;
+    top: -18px;
+  }
+  
+  /* Style the custom checkmark */
+  .custom-checkbox .checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    box-sizing: border-box;
+    transition: background-color 0.3s, border 0.3s;
+  }
+  
+  /* Increase checkbox size */
+  .custom-checkbox input:checked + .checkmark {
+    background-color: rgb(249, 249, 3);
+    border-color: rgb(249, 249, 3);
+    font-weight: bold; /* Make the checkmark bold */
+  }
+  
+  /* Display a checkmark when the box is checked */
+  .custom-checkbox input:checked + .checkmark::after {
+    content: '✔'; /* Checkmark symbol */
+    position: absolute;
+    right: -10px;
+    bottom: -5px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px; /* Make the checkmark bold and bigger */
+  }
+  
