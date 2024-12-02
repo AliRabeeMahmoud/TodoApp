@@ -1,5 +1,5 @@
 # Todo App (full stack)
-This project is developed using Spring Boot & Angular
+## Developed using Spring Boot & Angular
 
 ### Simple CURD operations with mysql database
 ### run backend on port 8080
